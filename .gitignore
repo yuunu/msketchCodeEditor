@@ -1,4 +1,4 @@
 node_modules
-./src/code.js
-./src/fullcode.js
-./sketch/sketch.js
+# /src/code.js
+# /src/fullcode.js
+# /sketch/sketch.js

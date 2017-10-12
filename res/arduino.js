@@ -1,17 +1,26 @@
 // Functions
+/*
 board.on("ready", function(){
     setup();
-    setInterval(loop, 50);
+    loopContainer();
 });
 
-var PWM = five.Pin.PWM;
-var INPUT = five.Pin.INPUT;
-var OUTPUT = five.Pin.OUTPUT;
-var ANALOG = five.Pin.ANALOG;
-var VIS_HEADER = '[VIS]';
+function loopContainer(){
+    loop();
+    setTimeout(loopContainer, 30);
+};
+
+const PWM = five.Pin.PWM;
+const INPUT = five.Pin.INPUT;
+const OUTPUT = five.Pin.OUTPUT;
+const ANALOG = five.Pin.ANALOG;
+const HIGH = 1, LOW = 0;
+const VIS_HEADER = '[VIS]';
+
 var analogValues = [];
 var digitalValues = [];
 
+// IO
 function pinMode(_pin, _mode){
     board.pinMode(_pin, _mode);
 
@@ -43,16 +52,34 @@ function digitalRead(_pin){
     return digitalValues[_pin];
 }
 
+// time
+function delay(_duration) {
+    var _start = (new Date()).getTime();
+    while( (new Date()).getTime() < (_start + _duration) ){
+    };
+}
+*/
+
+function millis(){
+    return (new Date()).getTime();
+}
+
+// Sockets
+
 io.on('connection', function(socket){
     if(typeof socketEvent == 'function'){
         socketEvent(socket);
     }
 });
 
-function writeSocket(_tag, _data){
+
+socket = function(){}
+
+socket.emit = function(_tag, _data){
     return io.emit(_tag, _data);
 }
 
+// Visualizer
 function visualize(_tag, _value){
     console.log(VIS_HEADER+'\t' + _tag + '\t' + _value);
 }

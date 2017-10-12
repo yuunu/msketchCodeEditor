@@ -11,7 +11,7 @@ $('#tool_open').on('click', function(){
 
 $('#tool_refresh').on('click', function(){
     socket.emit('execute', {type: 'p5', sketch: editorP5.getValue()});
-    $('#sw_preview').attr('src', "./sketch/");
+    $('#p5_preview').attr('src', "./sketch/");
 });
 
 $('#tool_save').on('click', function(){
