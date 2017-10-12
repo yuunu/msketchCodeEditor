@@ -15,7 +15,6 @@ const INPUT = five.Pin.INPUT;
 const OUTPUT = five.Pin.OUTPUT;
 const ANALOG = five.Pin.ANALOG;
 const HIGH = 1, LOW = 0;
-const VIS_HEADER = '[VIS]';
 
 var analogValues = [];
 var digitalValues = [];
@@ -78,6 +77,8 @@ socket = function(){}
 socket.emit = function(_tag, _data){
     return io.emit(_tag, _data);
 }
+
+const VIS_HEADER = '[VIS]';
 
 // Visualizer
 function visualize(_tag, _value){
