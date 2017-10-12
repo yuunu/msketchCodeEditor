@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+    <script>
+        var settings = JSON.parse(loadFile('../settings.json'));
+        var socket = io.connect(window.location.hostname+':'+settings.ports.appPort);
+
+        function loadFile(_filePath){
+            var _listPath =_filePath;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", _listPath, false);
+            xmlhttp.send(null);
+
+            return xmlhttp.responseText;
+        }
+    </script>
+    <script src="./sketch.js"></script>
+
+    <style>
+        body{
+            margin: 0;
+            background-color: #000;
+        }
+        canvas{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+    </style>
+  </head>
+  <body>
+  </body>
+</html>

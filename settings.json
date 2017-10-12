@@ -1,0 +1,16 @@
+{
+	"ports": {
+		"serverPort": "45588",
+		"appPort": "45589"
+	},
+	"files": {
+		"hwCode": "./src/code.js",
+		"fullCode": "./src/fullcode.js",
+		"p5Code": "./sketch/sketch.js",
+		"headerCode": "./res/header.js",
+		"arduinoMethods": "./res/arduino.js"
+	},
+	"editor": {
+		"visWindow": "10000"
+	}
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>RAW Editor</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+<body>
+    <div id="tab_left" class="tab-left">
+        <div class="logo-text"><b>RAW</b>Editor</div>
+
+        <button id="tab_hw" class="tab-button active"><i class="material-icons">memory</i><br><span>Hardware<span></button>
+        <button id="tab_p5" class="tab-button"><i class="material-icons">devices</i><br><span>Screen<span></button>
+        <button id="tab_socket" class="tab-button"><i class="material-icons">http</i><br><span>Integration<span></button>
+        <button id="tab_setting" class="tab-button"><i class="material-icons">settings</i><br><span>Settings<span></button>
+
+        <div class="copyright-text">ⓒ 2017<br><b>CIDR</b> Lab.<br>ID KAIST</div>
+    </div>
+
+    <div id="layout_hw" class="tab-layout">
+        <div id="hw_toolbar" class="tool-bar">
+            <select id="tool_ports" class="tool-select"></select><button id="tool_addPorts" class="tool-button"><i class="material-icons">done</i></button>
+            <button id="tool_run" class="tool-button"><i class="material-icons">file_upload</i></button>
+        </div>
+
+        <div id="hw_editor"></div>
+
+        <div id="hw_panel" class="panel-right">
+            <div class="panel_title">Variable Visualizer<span></div>
+            <div id="hw_visualzier">
+                <canvas id="hw_sensor_chart"></canvas>
+            </div>
+        </div>
+        <div id="hw_console"></div>
+    </div>
+
+    <div id="layout_p5" class="tab-layout">
+        <div id="p5_toolbar" class="tool-bar">
+            <button id="tool_save" class="tool-button"><i class="material-icons">save</i></button>
+            <button id="tool_open" class="tool-button"><i class="material-icons">fullscreen</i></button>
+            <button id="tool_refresh" class="tool-button"><i class="material-icons">replay</i></button>
+        </div>
+
+        <div id="p5_editor"></div>
+
+        <div id="p5_panel" class="panel-right">
+            <iframe id="p5_preview" scrolling="no" src="./sketch/"></iframe>
+        </div>
+    </div>
+
+    <div id="layout_setting" class="tab-layout">
+        <div class="setting-title">Settings</div>
+        <div class="setting-name">IDE Server Port</div>
+        <input id="setting_serverPort" type="text" class="setting-input-text">
+        <div class="setting-name">Internal App Port</div>
+        <input id="setting_appPort" type="text" class="setting-input-text">
+        <div class="setting-name">Variable Visualizer Refresh Time</div>
+        <input id="setting_visWindow" type="text" class="setting-input-text">
+        <div class="setting-desc">Settings will be applied after restarting Raspberry Pi or Web IDE</div>
+        <button id="setting_save" class="tool-button-large"><i class="material-icons">done</i><span>Apply</span></button>
+    </div>
+
+    <!-- JS Files -->
+    <script src="./script/init.js"></script>
+    <script src="./script/editor.js"></script>
+    <script src="./script/tool.js"></script>
+
+    <script>
+
+
+
+    </script>
+</body>
+</html>

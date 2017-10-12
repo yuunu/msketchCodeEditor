@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+body{
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+div, p{
+    box-sizing: border-box;
+}
+button, input, select, option{
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* sider bar */
+.tab-left{
+    position: absolute;
+    background-color: #dc3c57;
+    left: 0;
+    width: 120px; /* tab width */
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    z-index: 999;
+}
+
+.logo-text{
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 0 24px;
+    padding: 12px;
+    font-weight: 200;
+    opacity: 0.7;
+}
+
+.tab-button{
+    width: 100%;
+    height: 60px;
+    color: white;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: Transparent;
+    border: none;
+    text-align: center;
+    opacity: 0.5;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.tab-button span{
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.tab-button i{
+    font-size: 24px;
+}
+.tab-button.active{
+    opacity: 1;
+}
+
+
+.copyright-text{
+    width: 100%;
+    color: white;
+    font-size: 11px;
+    padding: 16px;
+    line-height: 15px;
+    font-weight: 200;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+/* top tool-bar */
+.tool-bar{
+    position: absolute;
+    width: calc(100% - 120px);
+    height: 48px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    z-index: 99;
+    right: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tool-button{
+    width: 48px;
+    height: 47px;
+    background-color: #f9f9f9;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    color: #ccc;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.tool-button i{
+    font-size: 21px;
+    padding-top: 3px;
+}
+.tool-button:hover{
+    color: #fff;
+    background-color: #dc3c57;
+}
+
+
+.tool-button-large{
+    height: 47px;
+    background-color: #f9f9f9;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 24px;
+    color: #ccc;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.tool-button-large i{
+    font-size: 21px;
+    vertical-align: middle;
+}
+.tool-button-large span{
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+.tool-button-large:hover{
+    color: #fff;
+    background-color: #dc3c57;
+}
+
+.tool-select{
+    width: 300px;
+    height: 47px;
+    padding: 0 0 0 16px;
+    background-color: #f9f9f9;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.tool-select option{
+    height: 47px;
+}
+
+/* buttons */
+#tool_run{
+    position: absolute;
+    right: 0px;
+    border-left: 1px solid #ddd;
+}
+#tool_ports{
+    border-right: 1px solid #ddd;
+}
+#tool_addPorts{
+    border-right: 1px solid #ddd;
+}
+#tool_save{
+    border-right: 1px solid #ddd;
+}
+#tool_open{
+    position: absolute;
+    right: 48px;
+    border-left: 1px solid #ddd;
+}
+#tool_refresh{
+    position: absolute;
+    right: 0;
+    border-left: 1px solid #ddd;
+}
+
+/*
+
+*/
+
+/* right panel */
+.panel-right{
+    position: absolute;
+    background-color: #fcfcfc;
+    top: 48px;
+    bottom: 0;
+    right: 0;
+    width: 480px;
+    border-left: 1px solid #ddd;
+    padding-top: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 9;
+}
+.panel_title{
+    width: 100%;
+    color: #dc3c57;
+    font-size: 16px;
+    padding: 12px 24px;
+    font-weight: 700;
+}
+
+/* editor */
+#hw_editor {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+}
+#p5_editor {
+    position: absolute;
+    top: 66px;
+    bottom: 120px;
+    left: 50%;
+    right: 0;
+    font-size: 14px;
+}
+/*
+.ace-chrome .ace_gutter{
+    background: #fff !important;
+}
+*/
+
+/* console */
+#hw_console{
+    position: absolute;
+    width: auto;
+    height: 240px;
+    bottom: 0;
+    overflow-y: scroll;
+    background-color: #222;
+    color: white;
+    font-size: 11px;
+    padding: 12px;
+}
+
+/* visulaizer */
+#hw_visualzier{
+    width: 100%;
+    height: 400px;
+    padding: 24px;
+}
+#hw_sensor_chart{
+
+}
+
+/* p5 */
+#layout_p5{
+    display: none;
+}
+#p5_panel{
+    width: 600px;
+    padding: 0;
+}
+#p5_preview{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* settings */
+#layout_setting{
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 32px 48px;
+    display: none;
+}
+.setting-title{
+    color: #dc3c57;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.setting-name{
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.setting-input-text{
+    width: 420px;
+    height: 32px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-left: 12px;
+    color: #dc3c57;
+    margin-bottom: 24px;
+}
+.setting-desc{
+    color: #bbb;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+#setting_save{
+    display: block;
+}
