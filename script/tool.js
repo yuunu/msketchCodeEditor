@@ -1,6 +1,7 @@
 // Run code
 $('#tool_run').on('click', function(){
     socket.emit('execute', {type: 'hw', code: editorJ5.getValue()});
+    msketchSocket.emit('execute', {type: 'hw', code: editorJ5.getValue()}); //yw_edited //send to msketch port:80
 });
 
 // Save and Open P5

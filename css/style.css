@@ -16,7 +16,7 @@ button, input, select, option{
 /* sider bar */
 .tab-left{
     position: absolute;
-    background-color: #dc3c57;
+    background-color: #1e1d23;
     left: 0;
     width: 120px; /* tab width */
     height: 100%;
@@ -27,12 +27,20 @@ button, input, select, option{
 .logo-text{
     width: 100%;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
-    margin: 0 0 24px;
-    padding: 12px;
-    font-weight: 200;
-    opacity: 0.7;
+    margin-top: 18px;
+    font-weight: 800;
+    opacity: 1;
+}
+.logo-text-sub{
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: 300;
+    opacity: 0.5;
 }
 
 .tab-button{
@@ -82,8 +90,8 @@ button, input, select, option{
     position: absolute;
     width: calc(100% - 120px);
     height: 48px;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
+    background-color: #27262c;
+    border: none;
     z-index: 99;
     right: 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -91,12 +99,12 @@ button, input, select, option{
 
 .tool-button{
     width: 48px;
-    height: 47px;
-    background-color: #f9f9f9;
+    height: 48px;
+    background-color: #27262c;
     border: none;
     display: inline-block;
-    vertical-align: middle;
-    color: #ccc;
+    vertical-align: top;
+    color: #fff;
 
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -108,7 +116,7 @@ button, input, select, option{
 }
 .tool-button:hover{
     color: #fff;
-    background-color: #dc3c57;
+    background-color: #6a3fc4;
 }
 
 
@@ -143,9 +151,10 @@ button, input, select, option{
 
 .tool-select{
     width: 300px;
-    height: 47px;
+    height: 48px;
     padding: 0 0 0 16px;
-    background-color: #f9f9f9;
+    background-color: #27262c;
+    color: white;
     border: none;
     display: inline-block;
     vertical-align: middle;
@@ -157,27 +166,22 @@ button, input, select, option{
 /* buttons */
 #tool_run{
     position: absolute;
-    right: 0px;
-    border-left: 1px solid #ddd;
+    top: 0;
+    right: 0;
 }
 #tool_ports{
-    border-right: 1px solid #ddd;
 }
 #tool_addPorts{
-    border-right: 1px solid #ddd;
 }
 #tool_save{
-    border-right: 1px solid #ddd;
 }
 #tool_open{
     position: absolute;
     right: 48px;
-    border-left: 1px solid #ddd;
 }
 #tool_refresh{
     position: absolute;
     right: 0;
-    border-left: 1px solid #ddd;
 }
 
 /*
@@ -235,7 +239,7 @@ button, input, select, option{
     height: 240px;
     bottom: 0;
     overflow-y: scroll;
-    background-color: #222;
+    background-color: #27262c;
     color: white;
     font-size: 11px;
     padding: 12px;
@@ -304,3 +308,11 @@ button, input, select, option{
 #setting_save{
     display: block;
 }
+
+/*
+Dark: #1e1d23
+Light: #27262c
+Purple: #6a3fc4
+Green: #4bb7ba
+Magenta: #fc315a
+*/

@@ -3,7 +3,7 @@ var settings = JSON.parse(loadFile('./settings.json'));
 
 // init socket server
 var socket = io.connect(window.location.hostname+':'+settings.ports.serverPort);
-
+var msketchSocket = io.connect(window.location.hostname+':80'); //yw msketch port
 // Get ports info at startup
 socket.on('ports', function(data){
     $('#tool_ports').append($('<option>', {value: data.comName, text: data.comName +": "+ data.manufacturer}));
@@ -22,7 +22,7 @@ socket.on('console', function(data){
 // Visualizer
 socket.on('visualizer', function(data){
     var _time = parseInt( ((new Date()).getTime()% settings.editor.visWindow) );
-
+    msketchSocket.emit('data', {name: data.name, value: data.value}); //yw_edited //send to msketch port:80
     addData(sensorChart, data.name, {x: _time, y: parseInt(data.value)})
 });
 
