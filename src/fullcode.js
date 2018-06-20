@@ -5,17 +5,9 @@ const io = require('socket.io').listen(server);
 
 var five = require("johnny-five");
 server.listen(45589);
-var board = new five.Board({port: "COM8"});
-
-board.on("ready", function(){
-   this.pinMode(0, five.Pin.ANALOG);
-   
-   this.analogRead(0, function(voltage){
-       visualize("mic", voltage);
-       socket.emit("mic", voltage)
-   })
-    
-});// Functions
+var PiIO = require('pi-io');
+var board = new five.Board({io: new PiIO()});
+// Functions
 /*
 board.on("ready", function(){
     setup();
